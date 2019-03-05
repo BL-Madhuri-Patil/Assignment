@@ -1,0 +1,95 @@
+<div>
+    <div fxLayoutAlign="center center" class="header">
+        Control And Test Parameters Form
+    </div>
+
+    <div fxLayout="column">
+        <div fxLayout="row">
+            <div fxFlex="100" fxLayoutGap="40px">
+                <div fxFlex="20" class="label-control ">
+                    CONTROL / TEST PARAMETER 1
+                </div>
+                <div fxFlex="100">
+                    <input type="text" class="control" fxFlex="100" [(ngModel)]="data.control">
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxFlex="100" fxLayoutGap="10px">
+            <div fxLayout="row">
+                <div fxLayout="row">
+                    <div class="label">
+                        PARAMETER SHORTNAME
+                    </div>
+                    <div>
+                        <input type="text" class="input-cls" [(ngModel)]="data.shortname">
+                    </div>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxLayout="row">
+                    <div class="label1">
+                        UNIT 1
+                    </div>
+                    <div>
+                        <input type="text" class="input-cls1" [(ngModel)]="data.unit">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxFlex="100" fxLayoutGap="10px">
+            <div fxLayout="row">
+                <div fxLayout="row">
+                    <div class="label-method">
+                        CONTROL METHOD 1
+                    </div>
+                    <div>
+                        <input type="text" class="input-cls" [(ngModel)]="data.controlmethod">
+                    </div>
+                </div>
+            </div>
+            <div fxLayout="row">
+                <div fxLayout="row">
+                    <div class="label-verification">
+                        VERIFICATION FREQUENCY 1
+                    </div>
+                    <div>
+                        <input type="text" class="input-cls1" [(ngModel)]="data.frequency">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div fxLayout="row">
+            <div class="label-control">
+                TYPE OF PARAMETER 1
+            </div>
+            <mat-radio-group fxLayoutGap="20px" class="radio" [(ngModel)]="data.typeofparameter">
+                <mat-radio-button value="1">CONTROL PARAMETER 1</mat-radio-button>
+                <mat-radio-button value="2">TEST PARAMETER 1</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div fxLayout="row" style="margin: 20px 0px">
+            <div class="label-control" fxFlex="20">
+                STATUS
+            </div>
+            <mat-radio-group fxLayoutGap="20px" class="radio" [(ngModel)]="data.status">
+                <mat-radio-button value="1">ACTIVE1</mat-radio-button>
+                <mat-radio-button value="0">INACTIVE1</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <div fxLayoutAlign="center center">
+            <div fxLayoutGap="10px">
+                <button mat-button class="submit-btn" [mat-dialog-close]="data">Sumbit
+                  <mat-icon>thumb_up</mat-icon>
+                </button>
+                <button mat-button class="cancel-btn">Cancel
+                    <mat-icon>close</mat-icon>
+                  </button>
+            </div>
+        </div>
+    </div>
+</div>

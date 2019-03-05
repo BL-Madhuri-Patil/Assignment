@@ -1,0 +1,98 @@
+<mat-toolbar class="toolbar">
+    <div fxLayout="row" fxFlex="100">
+        <div fxFlex="15%" fxLayout="row" fxLayoutGap="10px">
+            <button mat-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+              </button>
+            <h3>NHTS ERP</h3>
+        </div>
+        <div fxFlex="80"></div>
+        <div fxFlex="5" fxLayoutAlign="end" class="logout">
+            <mat-icon>person</mat-icon>
+
+            <mat-icon class="arrow" [matMenuTriggerFor]="menu">arrow_drop_down</mat-icon>
+        </div>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="logout()">Logout</button>
+        </mat-menu>
+    </div>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav opened #drawer class="sidenav" [mode]="screenWidth > 840 ? 'side' : 'over'" style="width:250px;">
+        <div fxLayout="column">
+            <!-- [ngClass]="{'selectedClass': selectedBtn == 'dashboard' }" -->
+            <button mat-list-item mat-button fxFlex="100">
+              <mat-icon>home</mat-icon>Dashboard
+            </button>
+            <!-- <button mat-list-item mat-button fxFlex="100">
+                <mat-icon>album</mat-icon>Masters
+              </button> -->
+            <mat-expansion-panel class="expansion">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <mat-icon>album</mat-icon>
+                        <span style="color: white">Masters</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Setup</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Labels</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Roles</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Permissions</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Users</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Control/Test Parameters</button>
+                    <div [ngClass]="{'selected': selectedBtn == 'control/testbtn'}"></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Individual Process</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Job Process</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Receipes</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Template</button>
+                    <div></div>
+                </div>
+                <div>
+                    <button mat-list-item mat-button fxFlex="100">Customers</button>
+                    <div></div>
+                </div>
+            </mat-expansion-panel>
+            <button mat-list-item mat-button fxFlex="100">
+                <mat-icon>album</mat-icon>Purchase Order
+              </button>
+            <button mat-list-item mat-button fxFlex="100">
+                  <mat-icon>album</mat-icon>GINS
+                </button>
+            <button mat-list-item mat-button fxFlex="100">
+                    <mat-icon>album</mat-icon>Biling
+                  </button>
+        </div>
+
+    </mat-sidenav>
+    <mat-sidenav-content style="height:100vh;">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

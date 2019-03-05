@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100vh;">
+    <mat-card fxFlex="33" fxFlex.xl="35" fxFlex.lg="35" fxFlex.md="40" fxFlex.sm="70" fxFlex.xs="90" class="login-card">
+        <div fxLayoutAlign="center center">
+            <img src="../../../assets/profile.png" alt="logo" class="logo" />
+        </div>
+        <div fxLayoutAlign="center center" class="account">
+            Login In To Your Account
+        </div>
+        <div>
+            <input type="email" placeholder="Email" [formControl]="email">
+            <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">{{getErrorForEmail()}}</mat-error>
+
+        </div>
+        <div>
+            <input type="password" placeholder="Password" [formControl]="password">
+            <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">{{getErrorForPassword()}}</mat-error>
+
+        </div>
+
+        <div fxLayout="row" class="remember">
+            <mat-checkbox [checked]="true">REMEMBER ME</mat-checkbox>
+        </div>
+        <div>
+            <button mat-raised-button color="accent" [disabled]="email.invalid || password.invalid" (click)="login()">Log In</button>
+        </div>
+    </mat-card>
+</div>

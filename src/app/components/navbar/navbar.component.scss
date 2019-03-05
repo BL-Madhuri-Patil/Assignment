@@ -1,0 +1,50 @@
+:host /deep/ .mat-drawer-backdrop.mat-drawer-shown {
+    visibility: hidden;
+}
+
+button {
+    font-size: 15px;
+    height: 50px;
+    text-align: left;
+    border-radius: 0px;
+}
+
+mat-icon {
+    color: white;
+    margin-right: 10px;
+}
+
+.sidenav,
+.toolbar {
+    color: white;
+    background: black;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.expansion {
+    background: black;
+    color: white;
+    margin-left: -9px;
+}
+
+::ng-deep .mat-expansion-indicator:after {
+    color: white;
+    margin-top: -10px;
+}
+
+.logout {
+    margin-top: 10px;
+}
+
+.arrow {
+    margin-left: -15px;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: red;
+    width: 4px;
+}

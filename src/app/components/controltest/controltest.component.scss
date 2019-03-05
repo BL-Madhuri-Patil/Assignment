@@ -1,0 +1,41 @@
+.main {
+    margin-left: 250px;
+}
+
+mat-card {
+    margin: 15px;
+}
+
+.album {
+    color: white;
+    font-size: 18px;
+}
+
+.button {
+    color: white;
+    background-color: #00b3b3;
+}
+
+:host /deep/ td.mat-cell:first-of-type,
+td.mat-footer-cell:first-of-type,
+th.mat-header-cell:first-of-type {
+    padding-left: 10px;
+}
+
+table {
+    border: 1px solid lightgrey;
+    margin-top: 10px;
+}
+
+:host /deep/ mat-footer-row,
+mat-header-row,
+mat-row,
+td.mat-cell,
+td.mat-footer-cell,
+th.mat-header-cell {
+    border-left: 1px solid lightgrey;
+}
+
+mat-icon {
+    font-size: 18px;
+}
